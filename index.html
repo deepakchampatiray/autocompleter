@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Autocompleter</title>
+  <style>
+    * {
+      margin : 0;
+      padding : 0;
+    }
+
+    input {
+      display: inline-block;
+    }
+  </style>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+  <form action="/test.html" method="post">
+    <input type="text" class="autocomplete" name="tw#local#name" id="InputText0">
+    <input type="text" class="autocomplete" name="tw#local#surname" id="InputText1">
+    <button type="submit">Submit</button>
+  </form>
+
+  <form action="/test.html" method="post">
+    <input type="text" class="autocomplete" name="tw#local#name" id="InputText3">
+    <input type="text" class="autocomplete" name="tw#local#surname" id="InputText4">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.1/require.min.js"></script>
+  <script src="js/autocompleter.js" charset="utf-8"></script>
+  <script>
+    require(['js/dc-autocompleter'], function(atc){
+      atc.attach('input.autocomplete');
+    })
+  </script>
+</body>
+</html>
